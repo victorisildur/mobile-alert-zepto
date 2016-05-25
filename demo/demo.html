@@ -21,25 +21,22 @@
              margin: 0;
          }
         </style>
-        <link rel="stylesheet" href="../less/alert.css"/>
     </head>
     <body>
         <button id="btn">trigger alert</button>
-        <div class="alert js-alert" style="display:none">
-            <div class="alert-box">
-                <div class="alert-msg-container">
-                    <p class="alert-msg"></p>
-                </div>
-                <div class="alert-positive">
-                </div>
-            </div>
-        </div>
+        <button id="btn2">trigger alert2</button>
         <script src="../js/zepto.js"></script>
-        <script src="../js/alert.js"></script>
+        <script src="../dist/alert.js"></script>
         <script>
          $('#btn').on('click', function() {
              alert({
                  msg: 'heiheihei',
+                 positive: 'ok'
+             });
+         });
+         $('#btn2').on('click', function() {
+             alert({
+                 msg: 'hahaha',
                  positive: 'ok'
              });
          });

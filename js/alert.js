@@ -1,22 +1,25 @@
-(function(win) {
-    var defaultOption = {
-        positive: 'ok'
-    };
-    var isFirst = true;;
-    function alert(option) {
-        $.extend(option, defaultOption);
-        var alertDiv = $('.js-alert'),
-            msgDiv = alertDiv.find('.alert-msg'),
-            posDiv = alertDiv.find('.alert-positive');
-        alertDiv.show();
-        msgDiv.html(option.msg);
-        posDiv.html(option.positive);
-        if (isFirst) {
-            posDiv.on('click', function() {
-                alertDiv.hide();
-            });
-            isFirst = false;
-        }
+var tmpl = require('../html/alert.html'),
+    css = require('../less/alert.less');
+
+var defaultOption = {
+    positive: 'ok'
+};
+
+function alert(option) {
+    $.extend(option, defaultOption);
+    if ($('.js-alert').length === 0) {
+        $('body').append(tmpl);
+        $('.js-alert .alert-positive').on('click', function() {
+            alertDiv.hide();
+        });
     }
-    win.alert = alert;
-})(window);
+    var alertDiv = $('.js-alert'),
+        msgDiv = alertDiv.find('.alert-msg'),
+        posDiv = alertDiv.find('.alert-positive');
+    msgDiv.html(option.msg);
+    posDiv.html(option.positive);
+    alertDiv.show();
+}
+
+window.alert = alert;
+

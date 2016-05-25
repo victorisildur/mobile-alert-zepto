@@ -1,0 +1,31 @@
+{
+  "name": "mobile-alert-zepto",
+  "version": "1.0.0",
+  "description": "mobile alert replacing window.alert(), mocking iOS alert UI, supporting custom message and positive button text",
+  "main": "dist/alert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorisildur/mobile-alert-zepto.git"
+  },
+  "keywords": [
+    "alert",
+    "zepto"
+  ],
+  "author": "victorisildur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorisildur/mobile-alert-zepto/issues"
+  },
+  "homepage": "https://github.com/victorisildur/mobile-alert-zepto#readme",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "html-loader": "^0.4.3",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
+  }
+}
