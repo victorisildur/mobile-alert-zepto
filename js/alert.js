@@ -6,7 +6,7 @@ var defaultOption = {
 };
 
 function alert(option) {
-    $.extend(option, defaultOption);
+    $.extend(defaultOption, option);
     if ($('.js-alert').length === 0) {
         $('body').append(tmpl);
         $('.js-alert .alert-positive').on('click', function() {
