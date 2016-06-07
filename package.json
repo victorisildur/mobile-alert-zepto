@@ -1,10 +1,9 @@
 {
   "name": "mobile-alert-zepto",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "mobile alert replacing window.alert(), mocking iOS alert UI, supporting custom message and positive button text",
   "main": "dist/alert.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
