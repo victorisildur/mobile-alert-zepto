@@ -57,6 +57,9 @@
 	        $('body').append(tmpl);
 	        $('.js-alert .alert-positive').on('click', function() {
 	            alertDiv.hide();
+	            if (option.callback && typeof option.callback === 'function') {
+	                option.callback();
+	            }
 	        });
 	    }
 	    var alertDiv = $('.js-alert'),

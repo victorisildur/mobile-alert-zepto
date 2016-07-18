@@ -31,13 +31,19 @@
          $('#btn').on('click', function() {
              alert({
                  msg: 'heiheihei',
-                 positive: '确定'
+                 positive: '确定',
+                 callback: function() {
+                     console.debug('btn1');
+                 }
              });
          });
          $('#btn2').on('click', function() {
              alert({
                  msg: 'hahaha',
-                 positive: '确定'
+                 positive: '确定',
+                 callback: function() {
+                     console.debug('btn2');
+                 }
              });
          });
         </script>
